@@ -1,0 +1,42 @@
+#数字前有空格
+#三个配置文件同时存在时优先级 properties>yml>yaml
+#大小写敏感
+
+#多环境开发 --- 区分环境
+
+#设置启用的环境
+spring:
+  profiles:
+    active: dev
+
+---
+#开发
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 80
+
+---
+#生产
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 81
+
+#默认info
+logging:
+  level:
+    root: warn
+
+---
+#测试
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 82

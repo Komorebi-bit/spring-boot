@@ -1,0 +1,12 @@
+#三个配置文件同时存在时优先级 properties>yml>yaml
+
+lesson: SpringBoot
+
+enterprise:
+  name: ko
+  age: 16
+  tel: 19811215666
+  subject:
+    - java
+    - 前端
+    - 大数据

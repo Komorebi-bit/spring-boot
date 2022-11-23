@@ -1,0 +1,64 @@
+#优先级别 properties > yml > yaml
+server:
+  port: 80
+#  servlet:
+#    context-path: /test #http://localhost/test/
+
+#actuator
+#management:
+#  server:
+#    port: 8081
+#  endpoints:
+#    web:
+#      base-path: /
+#      exposure:
+#        include: "*"
+
+spring:
+  main:
+    banner-mode: console  #off 隐藏logo
+#  banner:
+#    image:
+#      location: 11.png  #自定义logo
+logging:
+  level:
+    root: info  #修改日志级别
+
+#使用~表示null
+#null: ~
+#日期格式
+birthday: 1999-09-09
+#时间格式
+datetime: 2000.01.01T15:22:10+08:00
+#对象
+user:
+  name: ko
+  age: 20
+#数组
+likes:
+  - game
+  - music
+  - go
+likes2: [game,music,go]
+#对象数组
+users:
+  -
+    name: zhangsan
+    age: 18
+  -
+    name: lisi
+    age: 19
+
+users2: [{name:zhangsan,age:18},{name:lisi,age:19}]
+
+#变量引用
+baseDir: e:\java
+tempDir: ${basedir}\temp
+#转义字符生效
+temp1: "${basedir}\t1\t2\t3"
+
+datasource:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/...?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
+  username: root
+  password: 10086
