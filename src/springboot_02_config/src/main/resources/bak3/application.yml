@@ -1,0 +1,9 @@
+#多环境分组管理
+#再启动日志里可以看到dev,devMVC,devDB的顺序，后加载的覆盖前面的
+spring:
+  profiles:
+    active: dev
+    group:
+      "dev": devMVC,devDB
+      "pro": proMVC,devDB
+#    include: devMVC,devDB  boot2.4版本以前

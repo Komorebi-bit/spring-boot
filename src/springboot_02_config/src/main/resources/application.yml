@@ -3,11 +3,43 @@
 #大小写敏感
 
 #多环境开发 --- 区分环境
+#多环境单文件开发
 
+#应用环境
 #设置启用的环境
+
 spring:
   profiles:
     active: dev
+#设置日志级别
+#常用于检查系统运行状况
+#debug: true
+#整体应用日志级别
+#推荐方式
+logging:
+  #设置分组
+  group:
+    ebank: com.ko.controller,com.ko.dao,com.ko.service
+    iservice: com.alibaba
+  level:
+    root: info
+    #设置某个包的日志级别
+#    com.ko.controller: debug
+    #对分组设置级别
+    ebank: warn
+  pattern:
+    console: "%d %clr(%5p) --- [%18t] %clr(%-43.43c{43}){cyan} : %m%n"
+  file:
+    #在01目录下
+    name: server.log
+  logback:
+    rollingpolicy:
+      max-file-size: 4KB
+      file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
+  charset:
+    file: utf-8
+    console: UTF-8
+
 
 ---
 #开发
@@ -17,6 +49,7 @@ spring:
       on-profile: dev
 server:
   port: 80
+
 
 ---
 #生产
@@ -31,6 +64,7 @@ server:
 logging:
   level:
     root: warn
+
 
 ---
 #测试

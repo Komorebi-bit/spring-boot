@@ -1,4 +1,10 @@
 #优先级别 properties > yml > yaml
+#4级配置文件
+#1级 file: config/application.yml  最高
+#2级 file: application.yml
+#3级 classpath: config/application.yml
+#4级 classpath: application.yml  最低
+
 server:
   port: 80
 #  servlet:

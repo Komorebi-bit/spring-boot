@@ -3,6 +3,9 @@ package com.ko;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Komorebi
+ */
 @SpringBootApplication
 public class Springboot05SsmApplication {
 

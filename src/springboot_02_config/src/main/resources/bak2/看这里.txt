@@ -1,0 +1,2 @@
+多环境多文件开发
+把这三个文件放到classpath路径下，通过application.yml选择那个环境

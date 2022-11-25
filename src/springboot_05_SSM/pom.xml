@@ -38,11 +38,11 @@
         </dependency>
 
         <!--TODO 添加必要的依赖坐标 -->
-        <dependency>
+        <!-- <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.2.8</version>
-        </dependency>
+            <version>1.2.15</version>
+        </dependency> -->
 
        <!--  <dependency>
             <groupId>javax.servlet</groupId>
