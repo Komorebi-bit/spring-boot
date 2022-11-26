@@ -44,6 +44,9 @@ public class BookController {
         System.out.println(temp1);
         System.out.println(env.getProperty("likes[2]"));
         System.out.println(dataSource);
+        System.out.println("test hot deploy...");
+        System.out.println("test hot deploy...");
+        System.out.println("test hot deploy...");
         return "<h1>Hello Spring Boot!";
     }
 }
