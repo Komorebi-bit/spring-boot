@@ -28,7 +28,7 @@ logging:
     #对分组设置级别
     ebank: warn
   pattern:
-    console: "%d %clr(%5p) --- [%18t] %clr(%-43.43c{43}){cyan} : %m%n"
+    console: "%d %clr(%5p) %clr(${PID}){magenta} --- [%18t] %clr(%-43.43c{43}){cyan} : %m%n"
   file:
     #在01目录下
     name: server.log

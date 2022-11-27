@@ -1,0 +1,18 @@
+servers:
+# @ConfigurationProperties支持宽松绑定，以下均可以
+#  idaddress: 192.168.1.2
+#  idAddress: 192.168.1.1    # 驼峰
+  id-address: 192.168.1.3   # 主推，烤肉串模式
+#  id_address: 192.168.1.4   # 下划线模式
+#  IDADDRESS: 192.168.1.5    # 常量模式
+#  ID_ADD-RESS: 192.168.1.6
+  port: 9000
+  timeout: 20
+  dataSize: 10KB
+
+datasource:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  password: 0127
+# 0b 开头 二进制
+# 0 开头 八进制
+# 0x 开头 十六进制
