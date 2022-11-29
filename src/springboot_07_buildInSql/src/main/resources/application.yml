@@ -1,0 +1,54 @@
+# TODO 配置数据源相关信息
+server:
+  port: 80
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+#  datasource:
+#    #    type: com.zaxxer.hikari.HikariDataSource  #默认数据源
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/ssm_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+#    username: root
+#    password: 10086
+#    hikari:
+#      connection-timeout: 30000   #等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 默认:30秒
+#      minimum-idle: 5    # 最小连接数
+#      maximum-pool-size: 15   # 最大连接数
+#      auto-commit: true      # 自动提交
+#      idle-timeout: 600000    # 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），默认:10分钟
+#      pool-name: DatebookHikariCP   # 连接池名字
+#      max-lifetime: 28740000   # 一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms，建议设置比数据库超时时长少60秒，参考MySQL wait_timeout参数（show variables like '%timeout%';） -->
+#      connection-test-query: SELECT 1
+#      data-source-properties:
+#        prep-stmt-cache-size: 250
+#        prep-stmt-cache-sqlLimit: 2048
+#        use-server-prep-stmts: true
+#        use-local-session-state: true
+#        rewrite-batched-statements: true
+#        cache-result-set-metadata: true
+#        cache-server-configuration: true
+#        elide-set-auto-commits: true
+#        maintain-time-stats: false
+  jdbc: #默认
+    template:
+      query-timeout: -1 #查询超时时间
+      max-rows: 500 #最大行数
+      fetch-size: -1 #缓存行数
+  h2:
+    console:
+      enabled: true
+      path: /h2  #通过浏览器打开
+  datasource:
+      #    type: com.zaxxer.hikari.HikariDataSource  #默认数据源
+      # 初始化h2时，需要用到
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:~/test
+      username: sa
+      password: 123456
+#  create table book(id int, type varchar, name varchar, description varchar)
+#  insert into book values(1,'springboot1','springboot1','springboot1')
+#  insert into book values(2,'springboot2','springboot2','springboot2')
+#  SELECT * FROM BOOK
